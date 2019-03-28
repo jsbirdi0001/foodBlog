@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<div class="container bg-light py-3 post-container border" style="margin: 0 auto">
+    <h1 class="blog-header text-center">Edit <%= post.name %></h1>
+    <form action="/blog/<%= post._id %>?_method=PUT" method="POST" class="form-group col-lg-8 col-md-8 col-sm-12" style="margin: 0 auto">
+        <input class="form-control my-2" type="text" name="blog[name]" value=<%= post.name %>>
+        <input class="form-control my-2" type="text" name="blog[img]" value=<%= post.img %>>
+        <textarea class="form-control my-2 " name="blog[description]"><%= post.description %></textarea>
+        <input class="form-control btn btn-dark my-2" type="submit" >
+    </form>
+</div>
+
+
+<% include partials/footer %>

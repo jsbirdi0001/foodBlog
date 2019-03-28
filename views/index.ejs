@@ -1,0 +1,32 @@
+<% include partials/header %>
+
+
+    <div>
+        <div class="container row bg-light py-3 post-container border" style="margin: 0 auto; display:flex; flex-wrap: wrap">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-12">
+                <h1 class="blog-header text-center">Blog Posts</h1>
+            </div>
+            
+            
+            <% blog.forEach(function(a){ %>
+                
+               <div class="col-lg-3 col-md-4 col-sm-6 col-6 col-6-custom" >
+                   <div class="border post p-1">
+                        <h1 class="text-center border-bottom-custom py-2 post-name"> <%= a.name %> </h1>
+                        <img src="<%= a.img %>" class="img-fluid">
+                        <p class="text-center">Posted:
+                            <%= a.date.toDateString() %> <br>
+                            <a class="link" href="/blog/<%= a._id %>"><button class="btn btn-block">Open</button></a>
+                        </p>
+                   </div>
+                    
+                </div> 
+                
+                
+            <% }) %>
+        </div>
+    </div>
+    
+
+
+<% include partials/footer %>

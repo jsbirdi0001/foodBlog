@@ -1,0 +1,21 @@
+<% include partials/header %>
+<div class="container text-center col-md-10 col-11 bg-light py-3 post-container border" style="margin: 0 auto">
+    <div class="col-md-12 col-lg-12 col-sm-12 col-12">
+        <h1 class="blog-header text-center"><%= blog.name %></h1>
+    </div>
+    <div>
+        <img src="<%= blog.img %>" class="img-fluid mb-2" width="90%">
+    </div>
+    <div>
+        <p style="font-family: cursive; font-size: 1.4rem"><%- blog.description %></p>
+    </div>
+    <div class="d-inline">
+        <a href="/blog/<%= blog._id %>/edit" class="link"><button class="btn">Edit</button></a>
+    </div>
+    <form action="/blog/<%= blog._id %>?_method=DELETE" method="POST" class="d-inline ">
+        <button class="btn">Delete</button>
+    </form>
+</div>
+
+
+<% include partials/footer %>

@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<div class="container bg-light py-3 post-container border" style="margin: 0 auto">
+    <h1 class="blog-header text-center">New Post</h1>
+    <form action="/blog" method="POST" class="form-group col-lg-8 col-md-8 col-sm-12" style="margin: 0 auto">
+        <input class="form-control my-2" type="text" name="blog[name]" placeholder="Enter post name...">
+        <input class="form-control my-2" type="text" name="blog[img]" placeholder="Enter url of image...">
+        <textarea class="form-control my-2 " type="textarea" name="blog[description]" placeholder="Enter your blog here"></textarea>
+        <input class="form-control btn btn-dark my-2" type="submit" >
+    </form>
+</div>
+
+
+<% include partials/footer %>
